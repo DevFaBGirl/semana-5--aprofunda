@@ -3,4 +3,13 @@ import { Book } from '../../domain/book';
 
 export class Repository implements BookRepository {
   //seu codigo aqui
+  private books: Book[] = [];
+  save(book: Book): void {
+    this.books.push(book)
+  }
+
+  findAll(): Book[] {
+    return this.books;
+  }
+  
 }

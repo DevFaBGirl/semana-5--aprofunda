@@ -3,7 +3,18 @@ import { CreateBookUseCase } from '../../application/use-cases/create-book-use-c
 import { IdentifierGenerator } from './id-generator';
 import { BookController } from '../../interface/book-controller';
 import { ListAllBooksUseCase } from '../../application/use-cases/list-all-books-use-case';
+import { identifierToKeywordKind } from 'typescript';
 
 export function configureDependencies() {
  //seu codigo aqui
+const bookRepository = new Repository();
+const idGenerator = new IdentifierGenerator ();
+const createBookUseCase = new CreateBookUseCase (bookRepository, idGenerator);
+const listAllBooksUseCase = new ListAllBooksUseCase (bookRepository);
+const bookController = new BookController(createBookUseCase, listAllBooksUseCase);
+
+
+return {
+    bookController
+}
 } 

@@ -1,69 +1,40 @@
-# como criar um projeto com typescript e jest
 
-## inserir ts
+# Tarefa Semana 5 - Criação da API para Adotar Clean Architecture
 
-1- instalar typescript glogal
+## Descrição
+Este projeto faz parte da Tarefa da Semana 5, onde o objetivo é implementar uma API seguindo os princípios de Clean Architecture. A API permite a criação de livros e a listagem de todos os livros cadastrados.
 
-````
-npm install -g typescript
-````
+### Requisitos da Tarefa:
+- Deve ser possível criar um livro;
+- Deve ser possível listar todos os livros;
+- Entrega: Link do repositório gerado a partir do template com seus commits.
 
+### Principais Tecnologias Utilizadas: 🚀
+1. Node.js;
+2. TypeScript;
+3. Postman para testes das rotas.
 
-2- Inciar o projeto com npm
+### Funcionalidades: 
+- Criar um livro
+- Listar todos os livros
 
-````
-npm init -y 
-````
+### Testes Realizados no Insomnia: 🧪
+Criação de um livro: ⏬
 
-3- Instalar dependencias que usaremos no projeto
-
-````
-npm install express
-````
-
-````
-npm install typescript ts-node-dev @types/node @types/express
-````
-
-4- Iniciar o tsconfig
-
-````
-npx tsc --init
-````
-
-5 - Criar script
-
-````
-"scripts": {
-  "start": "ts-node-dev --respawn src/index.ts"
-}
-````
-
-## inserir jest
+![Criação de um livro](./assets/create_book.jpg)
 
 
-1- Instalar o jest
+Listagem de todos os livros criados - imagem 1: ⏬
 
-````
-npm install jest ts-jest @types/jest
-````
+![Listagem de todos os livros criados](./assets/list_book1.jpg)
 
-2- Instalar o supertest
 
-````
-npm install supertest @types/supertest
-````
+Listagem de todos os livros criados - imagem 2: ⏬
 
-3- Inicializar o jestconfig
+![Listagem de todos os livros criados 2 ](./assets/list_book2.jpg)
 
-````
-npx ts-jest config:init
-````
 
-4- criar o script
 
-````
-"scripts": {
-  "test": "jest"
-}
-````
+
+## O que Estudei Esta Semana:  📚🤓💻
+Durante esta semana, na formação Aprofunda PretaLab, estudamos TypeScript, Testes Unitários e os princípios da Arquitetura Limpa, aprendendo como refatorar e organizar o código de forma modular e escalável, separando responsabilidades para melhorar a estrutura e facilitar futuras manutenções.
